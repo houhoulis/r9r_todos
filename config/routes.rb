@@ -1,5 +1,9 @@
 R9rTodos::Application.routes.draw do
-  resources :tasks
+  resources :tasks do
+    member do
+      patch :toggle
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

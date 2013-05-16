@@ -1,0 +1,9 @@
+<li class="<%= 'completed' if task.completed? %>">
+  <div class="view">
+    <%# <%= check_box_tag :completed, '1', task.completed?, :class => 'toggle' %1> %>
+    <%= link_to 'toggle', toggle_task_path(task), :method => :patch %>
+    <%= label_tag task.description %>
+    <%= link_to '', task_path(task), :method => :delete, :class => 'destroy' %> 
+  </div>
+  <input class="edit" value="Create a TodoMVC template">
+</li>
